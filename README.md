@@ -2,8 +2,8 @@
 Quick way to consistently set up a new mac with my personal dev preferences for Machine Learning.
 
 # Let's Go
-Open terminal and type:
+Launch Terminal and type:
 
 ```bash
-bash <(curl -s http://mywebsite.com/myscript.txt)
+bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master/setup.sh)
 ```
