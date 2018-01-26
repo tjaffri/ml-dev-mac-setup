@@ -8,6 +8,6 @@ Launch Terminal and type:
 bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master/setup.sh)
 ```
 
-See comments in ``setup.sh`` for more information on what it is doing.
+See comments in ``setup.sh`` for more information on what it is doing. Set up is not completely unattended and will break occasionally to ask for credentials etc.
 
 Please enjoy responsibly.
