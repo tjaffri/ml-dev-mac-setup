@@ -7,3 +7,7 @@ Launch Terminal and type:
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master/setup.sh)
 ```
+
+See comments in ``setup.sh`` for more information on what it is doing.
+
+Please enjoy responsibly.
