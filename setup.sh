@@ -38,7 +38,13 @@ END
 val_from_python
 
 # Install vscode (use this cask https://github.com/caskroom/homebrew-cask/blob/master/Casks/visual-studio-code.rb)
-brew cask install visual-studio-code 
+brew cask install visual-studio-code
+
+# Launch vscode (makes it easier to pin it to the dock, and you see some docs as well)
+code
 
 # Install chrome (use this cask )
 brew cask install google-chrome
+
+# Launch Chrome
+open -a "Google Chrome"
