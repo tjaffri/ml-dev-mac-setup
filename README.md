@@ -8,6 +8,8 @@ Quick way to consistently set up a new mac with my personal dev preferences for 
 4. Clean up dock. Remove extraneous items and pin Terminal, Outlook, etc.
 
 # Set up Dev Tools
+See comments in ``setup.sh`` for more information.
+
 Launch Terminal and paste in the following:
 
 ```bash
@@ -16,7 +18,7 @@ bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master
 
 > Note: Set up is not completely unattended and will break occasionally to ask for credentials etc.
 
-See comments in ``setup.sh`` for more information on what it is doing. 
+After setup is complete, pin Chrome and Visual Studio Code to the dock.
 
 # Test
 Benchmark per guidance here: https://stackoverflow.com/questions/35703201/speed-benchmark-for-testing-tensorflow-install
