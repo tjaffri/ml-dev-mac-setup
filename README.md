@@ -12,13 +12,13 @@ Quick way to consistently set up a new mac with my personal dev preferences for 
 # Set up Dev Tools
 See comments in ``setup.sh`` for more information. This is an automated script that installs:
 
-1. Homebrew
-2. Git
-3. Python 3
-4. (pipenv)[http://pipenv.readthedocs.io/en/latest/]
-5. Tensorflow (includes a quick setup validation)
-6. Visual Studio Code
-7. Google Chrome
+1. [Homebrew](https://brew.sh/)
+2. [Git](https://git-scm.com/)
+3. [Python 3](https://www.python.org/downloads/)
+4. [pipenv](http://pipenv.readthedocs.io/en/latest/)
+5. [Tensorflow](https://www.tensorflow.org/) (includes a quick setup validation)
+6. [Visual Studio Code](https://code.visualstudio.com/)
+7. [Google Chrome](https://www.google.com/chrome/)
 
 To begin setup, launch Terminal and paste in the following:
 
