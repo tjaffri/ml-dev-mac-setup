@@ -19,7 +19,7 @@ See comments in ``setup.sh`` for more information. This is an automated script t
 5. Visual Studio Code
 6. Google Chrome
 
-To being setup, launch Terminal and paste in the following:
+To begin setup, launch Terminal and paste in the following:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master/setup.sh)
