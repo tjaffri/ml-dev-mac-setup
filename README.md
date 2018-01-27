@@ -1,7 +1,7 @@
 # Machine Learning Dev Mac Setup
 Quick way to consistently set up a new mac with my personal dev preferences for Machine Learning.
 
-> **_Tested most recently on a MacBook Pro (15-inch, 2017), 2.9 GHz Intel Core i7, with Intel HD Graphics 630_**
+> **_Tested most recently on a MacBook Pro (15-inch, 2017), 2.9 GHz Intel Core i7, with Intel HD Graphics 630 and MacOS High Sierra 10.13_**
 
 # Set up OS and Productivity Tools
 1. Unbox and admire your shiny new hardware
