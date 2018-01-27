@@ -21,7 +21,17 @@ bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master
 After setup is complete, pin Chrome and Visual Studio Code to the dock.
 
 # Test
-Benchmark per guidance here: https://stackoverflow.com/questions/35703201/speed-benchmark-for-testing-tensorflow-install
+Benchmark your setup:
+
+```bash
+source ~/tensorflow/bin/activate
+mkdir Source
+cd Source
+git clone https://github.com/tensorflow/models.git
+python models/tutorials/image/mnist/convolutional.py
+```
+
+The last line will print out per-step timing. With a CPU-only setup, you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step.
 
 # Use
 ...
