@@ -39,7 +39,6 @@ val_from_python
 
 # Install pipenv
 pip3 install --user pipenv
-echo 'export PATH=~/Library/Python/3.6/bin:$PATH' >>~/.bash_profile
 
 # Install vscode (use this cask https://github.com/caskroom/homebrew-cask/blob/master/Casks/visual-studio-code.rb)
 brew cask install visual-studio-code
