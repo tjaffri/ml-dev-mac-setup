@@ -3,10 +3,11 @@ Quick way to consistently set up a new mac with my personal dev preferences for 
 
 # Preliminaries
 1. Unbox and admire your shiny new hardware
-2. Launch app store and download all updates. I assume you are running OSX version macOS High Sierra or later.
+2. Launch app store and download all updates (including upgrading to the latest OS version). I assume you are running OSX version macOS High Sierra or later. 
+3. Download and install Microsoft Office.
 
 # Let's Go
-Launch Terminal and type:
+Launch Terminal and paste in the following:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master/setup.sh)
