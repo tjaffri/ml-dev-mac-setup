@@ -15,9 +15,10 @@ See comments in ``setup.sh`` for more information. This is an automated script t
 1. Homebrew
 2. Git
 3. Python 3
-4. Tensorflow (includes a quick setup validation)
-5. Visual Studio Code
-6. Google Chrome
+4. (pipenv)[http://pipenv.readthedocs.io/en/latest/]
+5. Tensorflow (includes a quick setup validation)
+6. Visual Studio Code
+7. Google Chrome
 
 To begin setup, launch Terminal and paste in the following:
 
