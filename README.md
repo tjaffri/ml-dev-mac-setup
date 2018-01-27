@@ -22,8 +22,15 @@ bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master
 
 After setup is complete, pin Chrome and Visual Studio Code to the dock.
 
+# Use
+You can enter the tensorflow virtual environment in Terminal at any time by running:
+
+```bash
+source ~/tensorflow/bin/activate
+```
+
 # Test
-Benchmark your setup:
+``setup.sh`` does basic Tensorflow setup validation. In addition, you can benchmark your setup to make sure it is performing well.
 
 ```bash
 source ~/tensorflow/bin/activate
@@ -33,9 +40,7 @@ git clone https://github.com/tensorflow/models.git
 python models/tutorials/image/mnist/convolutional.py
 ```
 
-The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step.
+The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step, a 10X improvement.
 
-# Use
-...
 
 Please enjoy responsibly.
