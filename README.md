@@ -1,6 +1,10 @@
 # Machine Learning Dev Mac Setup
 Quick way to consistently set up a new mac with my personal dev preferences for Machine Learning.
 
+# Preliminaries
+1. Unbox and admire your shiny new hardware
+2. Launch app store and download all updates. I assume you are running OSX version macOS High Sierra or later.
+
 # Let's Go
 Launch Terminal and type:
 
