@@ -37,9 +37,10 @@ source ~/tensorflow/bin/activate
 ```
 
 # Test
-``setup.sh`` does basic Tensorflow setup validation. In addition, you can benchmark your setup to make sure it is performing well.
+``setup.sh`` does basic Tensorflow setup validation. In addition, you can benchmark your setup to make sure it is performing well by running:
 
 ```bash
+cd ~
 source ~/tensorflow/bin/activate
 mkdir Source
 cd Source
@@ -48,6 +49,5 @@ python models/tutorials/image/mnist/convolutional.py
 ```
 
 The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step, a 10X improvement.
-
 
 Please enjoy responsibly.
