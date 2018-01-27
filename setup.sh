@@ -7,6 +7,9 @@ brew install git
 # Install python 3 (system likely already has 2.x)
 brew install python3
 
+# Install pipenv
+brew install pipenv
+
 # Install Tensorflow with virtualenv (instructions at https://www.tensorflow.org/install/install_mac)
 sudo easy_install pip
 pip3 install --upgrade virtualenv
@@ -36,9 +39,6 @@ END
     fi
 }
 val_from_python
-
-# Install pipenv
-pip3 install --user pipenv
 
 # Install vscode (use this cask https://github.com/caskroom/homebrew-cask/blob/master/Casks/visual-studio-code.rb)
 brew cask install visual-studio-code
