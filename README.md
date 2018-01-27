@@ -15,4 +15,10 @@ bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master
 
 See comments in ``setup.sh`` for more information on what it is doing. Set up is not completely unattended and will break occasionally to ask for credentials etc.
 
+# Test
+Benchmark per guidance here: https://stackoverflow.com/questions/35703201/speed-benchmark-for-testing-tensorflow-install
+
+# Use
+...
+
 Please enjoy responsibly.
