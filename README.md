@@ -10,9 +10,16 @@ Quick way to consistently set up a new mac with my personal dev preferences for 
 4. Clean up dock. Remove extraneous items and pin Terminal, Outlook, etc.
 
 # Set up Dev Tools
-See comments in ``setup.sh`` for more information.
+See comments in ``setup.sh`` for more information. This is an automated script that installs:
 
-Launch Terminal and paste in the following:
+1. Homebrew
+2. Git
+3. Python 3
+4. Tensorflow (includes a quick setup validation)
+5. Visual Studio Code
+6. Google Chrome
+
+To being setup, launch Terminal and paste in the following:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master/setup.sh)
@@ -20,7 +27,7 @@ bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master
 
 > **Note**: Set up is not completely unattended and will break occasionally to ask for credentials etc.
 
-After setup is complete, pin Chrome and Visual Studio Code to the dock.
+After setup is complete, Chrome and Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin these to the dock.
 
 # Use
 You can enter the tensorflow virtual environment in Terminal at any time by running:
