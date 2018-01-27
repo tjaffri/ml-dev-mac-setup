@@ -31,7 +31,7 @@ git clone https://github.com/tensorflow/models.git
 python models/tutorials/image/mnist/convolutional.py
 ```
 
-The last line will print out per-step timing. With a CPU-only setup, you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step.
+The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step.
 
 # Use
 ...
