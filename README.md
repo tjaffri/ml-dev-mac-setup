@@ -1,12 +1,13 @@
 # Machine Learning Dev Mac Setup
 Quick way to consistently set up a new mac with my personal dev preferences for Machine Learning.
 
-# Preliminaries
+# Set up OS and Productivity Tools
 1. Unbox and admire your shiny new hardware
 2. Launch app store and download all updates (including upgrading to the latest OS version). I assume you are running OSX version macOS High Sierra or later. 
-3. Download and install Microsoft Office.
+3. Download and install Microsoft Office (or other productivity suite)
+4. Clean up dock. Remove extraneous items and pin Terminal, Outlook, etc.
 
-# Let's Go
+# Set up Dev Tools
 Launch Terminal and paste in the following:
 
 ```bash
