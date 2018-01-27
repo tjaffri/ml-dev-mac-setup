@@ -46,5 +46,5 @@ code
 # Install chrome (use this cask )
 brew cask install google-chrome
 
-# Launch Chrome
+# Launch Chrome (makes it easier to pin it to the dock and set it as the default browser etc.)
 open -a "Google Chrome"
