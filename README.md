@@ -29,9 +29,17 @@ bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master
 
 After setup is complete, Chrome and Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin these to the dock.
 
-To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, and simply select the python 3 environment.
+To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, and simply select the python 3 environment in vscode.
 
 # Use
+Try typing ``pipenv`` in terminal. If the command is not found, you need to set your PATH correctly. First find the user base binary directory for python3 and then add that to your path (add /bin to the end). See example below (you may need to correct this if your user-base is different)
+
+```bash
+python3 -m site --user-base
+~/Library/Python/3.6
+echo 'export PATH=~/Library/Python/3.6/bin:$PATH' >>~/.bash_profile
+```
+
 You can enter the tensorflow virtual environment in Terminal at any time by running:
 
 ```bash
