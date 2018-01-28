@@ -4,9 +4,9 @@ Quick way to consistently set up a new mac with my personal dev preferences for 
 > **_Tested most recently on a MacBook Pro (15-inch, 2017), 2.9 GHz Intel Core i7, with Intel HD Graphics 630 and MacOS High Sierra 10.13_**
 
 # Set up OS and Productivity Tools
-1. Unbox and admire your shiny new hardware
-2. Launch app store and download all updates (including upgrading to the latest OS version). 
-3. Download and install Microsoft Office (or other productivity suite), instructions will vary.
+1. Unbox and admire your shiny new hardware. Go through default OS setup.
+2. Launch app store and download all updates (including upgrading to the latest OS version if needed). 
+3. Download and install Microsoft Office (or other productivity suite), instructions will vary. Sign in.
 4. Clean up dock. Remove extraneous items and pin Terminal, Outlook, etc.
 
 # Set up Dev Tools
@@ -33,14 +33,6 @@ After setup is complete, Chrome and Visual Studio Code will launch automatically
 To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, and simply select the python 3 environment in vscode.
 
 # Use
-Try typing ``pipenv`` in terminal. If the command is not found, you need to set your PATH correctly. First find the user base binary directory for python3 and then add that to your path (add /bin to the end). See example below (you may need to correct this if your user-base is different)
-
-```bash
-python3 -m site --user-base
-~/Library/Python/3.6
-echo 'export PATH=~/Library/Python/3.6/bin:$PATH' >>~/.bash_profile
-```
-
 You can enter the tensorflow virtual environment in Terminal at any time by running:
 
 ```bash
