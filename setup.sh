@@ -46,7 +46,7 @@ brew cask install visual-studio-code
 # Launch vscode (makes it easier to pin it to the dock, and you see some docs as well)
 code
 
-# Install chrome (use this cask )
+# Install chrome
 brew cask install google-chrome
 
 # Launch Chrome (makes it easier to pin it to the dock and set it as the default browser etc.)
