@@ -53,6 +53,8 @@ python models/tutorials/image/mnist/convolutional.py
 
 The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step, a 10X improvement.
 
+> **Note:** As of version 1.2, tensorflow does not support GPU on macOS. For faster performance, you can try training on a linux cluster in the cloud (running inference locally on the mac CPU).
+
 # Update
 See https://docs.brew.sh/FAQ.html.
 
