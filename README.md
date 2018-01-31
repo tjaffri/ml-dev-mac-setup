@@ -57,7 +57,7 @@ Here are some recommended global settings for vscode. You can go to ``File > Pre
 # 4. Configure and Run Python
 > **Note:** Official ``pipenv`` support in vscode is a [work in progress](https://github.com/Microsoft/vscode-python/issues/404). After that ships, the following steps will likely get simpler.
 
-### 4.1 Tensorflow
+### 4.1. Tensorflow
 You can enter the tensorflow virtual environment in Terminal at any time by running:
 
 ```bash
@@ -65,21 +65,21 @@ source ~/tensorflow/bin/activate
 ```
 Use ``pipenv`` to manage dependencies other than tensorflow for individual projects.
 
-### 4.2	Installing Dependencies (or Starting Fresh)
+### 4.2.	Installing Dependencies (or Starting Fresh)
 1. Clone repo locally, then cd into it in a terminal, e.g. bash.
 2. Run vscode via ``code .``. Once vscode is running, launch the integrated terminal. Do subsequent operations in the vscode integrated terminal.
 3. Run ``pipenv install --dev`` to install all dependencies using ``pipenv``. If you are starting fresh this will init things.
 4. Run ``pipenv shell`` to activate the virtual environment in your terminal.
 5, If you need to add a new dependency, run ``pipenv install dependency-name`` and it will be added to the Pipfile etc. for this virtual env. If your dependency is dev-time only, run ``pipenv install dependency-name --dev``.
 
-### 4.3 Run
+### 4.3. Run
 To run a script, first ensure that your pipenv shell is running by typing ``pipenv shell`` in the integrated terminal.
 
 Next, type ``python filename.py`` and the correct version of python plus all the dependencies you installed via pipenv should resolve. A few notes:
 1. You might need to explicitly run python3 instead of python if that ends up resolving to python 2. You can run ``python --version`` to see what version it resolving to.
 2. If you get errors resolving dependencies make sure you are installing dependencies in your pipenv as discussed above, and also ensure you are running the python installed in the virtualenv. You can run ``where python`` to make sure it is a path inside your virtualenv.
 
-### 4.4 Debug
+### 4.4. Debug
 If you want to use the built-in debugger in vscode, you will find that imported packages are not found if the built-in debugger is using the system python (not the one in your virtual env). To remedy this, you can update your ``launch.json`` to reference the pythonPath in your virtualenv. You can get this path by doing ``where python`` inside your virtualenv (make sure you use the full path, not a relative path).
 
 Since this will be project and machine specific you should make sure you don't commit the launch.json to git.
