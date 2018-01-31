@@ -41,7 +41,11 @@ END
 val_from_python
 
 # Install vscode (use this cask https://github.com/caskroom/homebrew-cask/blob/master/Casks/visual-studio-code.rb)
+# and related extensions/plugins
 brew cask install visual-studio-code
+code --install-extension ms-python.python
+pip3 install --upgrade pylint
+pip3 install --upgrade autopep8
 
 # Launch vscode (makes it easier to pin it to the dock, and you see some docs as well)
 code
