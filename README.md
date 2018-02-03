@@ -101,11 +101,11 @@ The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac 
 > **Note:** As of version 1.2, tensorflow does not support GPU on macOS. For faster performance, you can try training on a linux cluster in the cloud (running inference locally on the mac CPU).
 
 # 8. Update
-To update all chocolatey packages, see: https://docs.brew.sh/FAQ.html.
+To update all homebrew packages, see: https://docs.brew.sh/FAQ.html.
 
 To update all pipenv packages, enter your working directory and then type:
 
-```powershell
+```bash
 pipenv update 
 ```
 
