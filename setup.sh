@@ -10,6 +10,9 @@ brew install python3
 # Install pipenv
 brew install pipenv
 
+# Install jupyter (per https://jupyter.org/install.html)
+pip3 install --upgrade jupyter
+
 # Install Tensorflow with virtualenv (instructions at https://www.tensorflow.org/install/install_mac)
 sudo easy_install pip
 pip3 install --upgrade virtualenv
