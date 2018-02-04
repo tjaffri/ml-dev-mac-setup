@@ -6,8 +6,9 @@ brew install git
 
 # Install miniconda3
 brew cask install miniconda
-echo 'export PATH=/usr/local/miniconda3/bin:$PATH' >>~/.bash_profile  # add conda bins to path for future sessions
-source .bash_profile # add conda bins to path for this session 
+echo ". /usr/local/miniconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
+echo "conda activate" >> ~/.bash_profile
+source ~/.bash_profile # add conda bins to path for this session 
 conda update conda -y # update conda
 
 # Install tensorflow
