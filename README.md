@@ -103,10 +103,11 @@ The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac 
 # 8. Update
 To update all homebrew packages, see: https://docs.brew.sh/FAQ.html.
 
-To update all pipenv packages, enter your working directory and then type:
+To update all global conda packages, type:
 
 ```bash
-pipenv update 
+conda update conda
+conda update --all
 ```
 
 Please enjoy responsibly.
