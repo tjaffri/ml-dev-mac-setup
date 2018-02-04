@@ -4,22 +4,14 @@
 # Install git (snippet from https://git-scm.com/book/en/v1/Getting-Started-Installing-Git)
 brew install git
 
-# Install python 3 (system likely already has 2.x)
-brew install python3
+# Install miniconda3
+brew cask install miniconda
+echo 'export PATH=/usr/local/miniconda3/bin:$PATH' >>~/.bash_profile  # add conda bins to path for future sessions
+source .bash_profile # add conda bins to path for this session 
+conda update conda -y # update conda
 
-# Install pipenv
-brew install pipenv
-
-# Install jupyter (per https://jupyter.org/install.html)
-pip3 install --upgrade jupyter
-
-# Install Tensorflow with virtualenv (instructions at https://www.tensorflow.org/install/install_mac)
-sudo easy_install pip
-pip3 install --upgrade virtualenv
-virtualenv --system-site-packages -p python3 tensorflow # for Python 3.n
-source ~/tensorflow/bin/activate
-easy_install -U pip
-pip3 install --upgrade tensorflow
+# Install tensorflow
+conda install tensorflow -y
 
 # Validate Tensorflow installation per https://www.tensorflow.org/install/install_mac#ValidateYourInstallation
 # We need to run a bit of python, using the trick here (with thanks): https://gist.github.com/welbornprod/ccbf43393ecd610032f4
@@ -47,8 +39,8 @@ val_from_python
 # and related extensions/plugins
 brew cask install visual-studio-code
 code --install-extension ms-python.python
-pip3 install --upgrade pylint
-pip3 install --upgrade autopep8
+conda install pylint -y
+pip3 install --upgrade autopep8 # not available on conda at the time of writing
 
 # Launch vscode (makes it easier to pin it to the dock, and you see some docs as well)
 code
