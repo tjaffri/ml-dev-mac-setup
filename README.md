@@ -21,13 +21,13 @@ See comments in ``setup.sh`` for more information. This is an automated script t
 7. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
 8. [Google Chrome](https://www.google.com/chrome/)
 
-To begin setup, launch Terminal and paste in the following:
+To begin setup, launch Terminal and paste in the following. Set up is not completely unattended and will break occasionally to ask for credentials etc.
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master/setup.sh)
 ```
 
-> **Note**: Set up is not completely unattended and will break occasionally to ask for credentials etc.
+> **Important Note**: After setup is complete, close the Terminal window and open a fresh one to continue.
 
 # 3. Configure Visual Studio Code
 After setup is complete, Chrome and Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin these to the dock.
@@ -49,7 +49,7 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
 }
 ```
 
-> **Note**: As you use vscode, if you get error messages stating that pylint (code linter) or autopep8 (code formatter) is not installed, or get other problems related to importing modules make sure you have set the environment in vscode to python3. Look on the bottom left edge of the IDE to select the environment. If these issues persist, make sure your current conda environment has these packages installed.
+> **Note**: As you use vscode, if you get error messages stating that pylint (code linter) or autopep8 (code formatter) is not installed, or get other problems related to importing modules make sure you have set the environment in vscode to python3. Look on the bottom left edge of the IDE to select the environment. If these issues persist, make sure your current conda environment has these packages installed, e.g. type ``conda install pylint`` or ``pip install --upgrade autopep8`` after activating the environment you are using.
 
 # 4. Configure and Run Python
 Follow the conda user guide to use python, create and manage environments: https://conda.io/docs/user-guide/overview.html. The following is a condensed summary for common workflows.
@@ -62,7 +62,7 @@ However, there will some situations where there are packages that you may wish t
 For such projects with custom package requirements, it is recommended that you create a new conda environment. This is a good practice in general when starting new projects since you never know when a custom package will be required.
 
 ```bash
-conda create --name project-name
+conda create --name project-name --clone base
 conda activate project-name
 ```
 
@@ -73,22 +73,19 @@ conda activate project-name
 conda env export > environment.yml
 ```
 
-Others can then create an environment using your saved environment.yml file by typing:
+Others can then create an environment using your saved ``environment.yml`` file by typing:
 
 ```bash
 conda env create -f environment.yml
 conda activate project-name
 ```
 
+If you clone a repo that contains an ``environment.yml`` file, you should run the same commadn above to create the environment for that repo locally.
+
 ### 4.3. Running
-To run a script, first ensure that the appropriate conda environment is active. If you see ``(base) `` as a prefix to your bash shell then you are in the base (global) environment, which should be true for all bash shells. If you want to use another environment, make sure you run ``conda activate project-name``.
+To run a script, first ensure that the appropriate conda environment is active. If you see ``(base) `` as a prefix to your bash shell then you are in the base (global) environment, which should be true for all bash shells. If you want to use another environment, for example to use some custom packages that are not installed in the base environment, make sure you run ``conda activate project-name``.
 
 Next, type ``python filename.py`` and the correct version of python plus all the dependencies you installed into the environment should resolve.
-
-### 4.4. Debugging
-If you want to use the built-in debugger in vscode, you will find that imported packages are not found if the built-in debugger is using the system python (not the one in your environment). To remedy this, you can update your ``launch.json`` to reference the pythonPath in your environment. You can get this path by doing ``where python`` inside your environment (make sure you use the full path, not a relative path).
-
-Since this will be project and machine specific you should make sure you don't commit the launch.json to git.
 
 # 7. Benchmark
 ``setup.sh`` does basic Tensorflow setup validation. In addition, you can benchmark your setup to make sure it is performing well by running:
