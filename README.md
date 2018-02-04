@@ -16,9 +16,10 @@ See comments in ``setup.sh`` for more information. This is an automated script t
 2. [Git](https://git-scm.com/)
 3. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
 4. [Tensorflow](https://www.tensorflow.org/) (also performs a quick setup validation)
-5. [Jupyter](https://jupyter.org)
-6. [Visual Studio Code](https://code.visualstudio.com/)
-7. [Google Chrome](https://www.google.com/chrome/)
+5. [keras](https://keras.io/#installation)
+6. [Jupyter](https://jupyter.org)
+7. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
+8. [Google Chrome](https://www.google.com/chrome/)
 
 To begin setup, launch Terminal and paste in the following:
 
@@ -31,9 +32,9 @@ bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master
 # 3. Configure Visual Studio Code
 After setup is complete, Chrome and Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin these to the dock.
 
-To use python in Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.sh``.
+To use python in Visual Studio Code, read the docs here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.sh``.
 
-Here are some recommended global settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Command-,`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
+Here are some recommended user (global) settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Command-,`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
 
 ```
 {
@@ -52,35 +53,44 @@ Here are some recommended global settings for vscode. You can go to ``File > Pre
 }
 ```
 
-> **Note**: As you use vscode, if you get error messages stating that pylint (code linter) or autopep8 (code formatter) is not installed, or get other problems related to importing modules make sure you have set the environment in vscode to python3. Look on the bottom left edge of the IDE window to select the environment.
+> **Note**: As you use vscode, if you get error messages stating that pylint (code linter) or autopep8 (code formatter) is not installed, or get other problems related to importing modules make sure you have set the environment in vscode to python3. Look on the bottom left edge of the IDE to select the environment. If these issues persist, make sure your current conda environment has these packages installed.
 
 # 4. Configure and Run Python
-> **Note:** Official ``pipenv`` support in vscode is a [work in progress](https://github.com/Microsoft/vscode-python/issues/404). After that ships, the following steps will likely get simpler.
+Follow the conda user guide to use python, create and manage environments: https://conda.io/docs/user-guide/overview.html. The following is a condensed summary for common workflows.
 
-### 4.1. Tensorflow
-You can enter the tensorflow virtual environment in Terminal at any time by running:
+### 4.1 Managing Your Environment
+Some commonly use packages are installed in the base (global) conda environment (e.g. tensorflow and jupyter). For some standard types of projects you should be able to use that base (global) environment without any changes. The environment should already be active in any bash shell with this standard setup, however if you need to activate it elsewhere just type ``conda activate``.
+
+However, there will some situations where there are packages that you may wish to install for a specific project, which are not available in the global environment (and you don't want to install them in the global environment either, perhaps due to versioning issues).
+
+For such projects with custom package requirements, it is recommended that you create a new conda environment. This is a good practice in general when starting new projects since you never know when a custom package will be required.
 
 ```bash
-source ~/tensorflow/bin/activate
+conda create --name project-name
+conda activate project-name
 ```
-Use ``pipenv`` to manage dependencies other than tensorflow for individual projects.
 
-### 4.2.	Installing Dependencies (or Starting Fresh)
-1. Clone repo locally, then cd into it in a terminal, e.g. bash. If you're starting fresh, just ``mkdir`` a new directory.
-2. Run vscode via ``code .``. Once vscode is running, launch the integrated terminal. Do subsequent operations in the vscode integrated terminal.
-3. Run ``pipenv install --dev`` to install all dependencies using ``pipenv``. If you are starting fresh this will init pipenv and create a Pipfile, virtual environment, etc.
-4. Run ``pipenv shell`` to activate the virtual environment in your terminal.
-5. If you need to add a new dependency, run ``pipenv install dependency-name`` and it will be added to the Pipfile etc. for this virtual env. If your dependency is dev-time only, run ``pipenv install dependency-name --dev``.
+Whenever you update your environment, you should save its definition in case somebody else wants to replicate your environment and build your project. Do this by typing:
 
-### 4.3. Run
-To run a script, first ensure that your pipenv shell is running by typing ``pipenv shell`` in the integrated terminal.
+```bash
+conda activate project-name
+conda env export > environment.yml
+```
 
-Next, type ``python filename.py`` and the correct version of python plus all the dependencies you installed via pipenv should resolve. A few notes:
-1. You might need to explicitly run python3 instead of python if that ends up resolving to python 2. You can run ``python --version`` to see what version it resolving to.
-2. If you get errors resolving dependencies make sure you are installing dependencies in your pipenv as discussed above, and also ensure you are running the python installed in the virtualenv. You can run ``where python`` to make sure it is a path inside your virtualenv.
+Others can then create an environment using your saved environment.yml file by typing:
 
-### 4.4. Debug
-If you want to use the built-in debugger in vscode, you will find that imported packages are not found if the built-in debugger is using the system python (not the one in your virtual env). To remedy this, you can update your ``launch.json`` to reference the pythonPath in your virtualenv. You can get this path by doing ``where python`` inside your virtualenv (make sure you use the full path, not a relative path).
+```bash
+conda env create -f environment.yml
+conda activate project-name
+```
+
+### 4.3. Running
+To run a script, first ensure that the appropriate conda environment is active. If you see ``(base) `` as a prefix to your bash shell then you are in the base (global) environment, which should be true for all bash shells. If you want to use another environment, make sure you run ``conda activate project-name``.
+
+Next, type ``python filename.py`` and the correct version of python plus all the dependencies you installed into the environment should resolve.
+
+### 4.4. Debugging
+If you want to use the built-in debugger in vscode, you will find that imported packages are not found if the built-in debugger is using the system python (not the one in your environment). To remedy this, you can update your ``launch.json`` to reference the pythonPath in your environment. You can get this path by doing ``where python`` inside your environment (make sure you use the full path, not a relative path).
 
 Since this will be project and machine specific you should make sure you don't commit the launch.json to git.
 
@@ -103,7 +113,7 @@ The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac 
 # 8. Update
 To update all homebrew packages, see: https://docs.brew.sh/FAQ.html.
 
-To update all global conda packages, type:
+To update all base (global) environment conda packages, type:
 
 ```bash
 conda update conda
