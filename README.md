@@ -14,9 +14,9 @@ See comments in ``setup.sh`` for more information. This is an automated script t
 
 1. [Homebrew](https://brew.sh/)
 2. [Git](https://git-scm.com/)
-3. [Python 3](https://www.python.org/downloads/)
-4. [pipenv](http://pipenv.readthedocs.io/en/latest/)
-5. [Tensorflow](https://www.tensorflow.org/) (includes a quick setup validation)
+3. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
+4. [Tensorflow](https://www.tensorflow.org/) (also performs a quick setup validation)
+5. [Jupyter](https://jupyter.org)
 6. [Visual Studio Code](https://code.visualstudio.com/)
 7. [Google Chrome](https://www.google.com/chrome/)
 
@@ -31,9 +31,9 @@ bash <(curl -s https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master
 # 3. Configure Visual Studio Code
 After setup is complete, Chrome and Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin these to the dock.
 
-To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.sh``.
+To use python in Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.sh``.
 
-Here are some recommended global settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-comma`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
+Here are some recommended global settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Command-,`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
 
 ```
 {
