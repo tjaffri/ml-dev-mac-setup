@@ -42,10 +42,6 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
   "files.autoSave": "afterDelay",
   // Commit all changes when there are no staged changes.
   "git.enableSmartCommit": true,
-   // Arguments passed in. Each argument is a separate item in the array.
-  "python.linting.pylintArgs": [
-    "--disable=E0401"
-  ],
   // Arguments passed in. Each argument is a separate item in the array.
   "python.formatting.autopep8Args": [
     "--max-line-length=120"
