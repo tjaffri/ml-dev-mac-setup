@@ -92,14 +92,11 @@ Next, type ``python filename.py`` and the correct version of python plus all the
 
 ```bash
 cd ~
-source ~/tensorflow/bin/activate
-mkdir Source
-cd Source
-git clone https://github.com/tensorflow/models.git
-python models/tutorials/image/mnist/convolutional.py
+git clone https://github.com/tensorflow/models.git benchmark
+python ./benchmark/tutorials/image/mnist/convolutional.py
 ```
 
-The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step, a 10X improvement.
+The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~115ms per step. With a fast GPU setup you should get ~10ms per step, a ~10X improvement.
 
 > **Note:** As of version 1.2, tensorflow does not support GPU on macOS. For faster performance, you can try training on a linux cluster in the cloud (running inference locally on the mac CPU).
 
