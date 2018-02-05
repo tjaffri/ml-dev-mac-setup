@@ -54,7 +54,7 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
 # 4. Configure and Run Python
 Follow the conda user guide to use python, create and manage environments: https://conda.io/docs/user-guide/overview.html. The following is a condensed summary for common workflows.
 
-### 4.1 Managing Your Environment
+### 4.1. Managing Your Environment
 Some commonly use packages are installed in the base (global) conda environment (e.g. tensorflow and jupyter). For some standard types of projects you should be able to use that base (global) environment without any changes. The environment should already be active in any bash shell with this standard setup, however if you need to activate it elsewhere just type ``conda activate``.
 
 However, there will some situations where there are packages that you may wish to install for a specific project, which are not available in the global environment (and you don't want to install them in the global environment either, perhaps due to versioning issues).
@@ -82,37 +82,7 @@ conda activate project-name
 
 If you clone a repo that contains an ``environment.yml`` file, you should run the same commadn above to create the environment for that repo locally.
 
-### 4.Follow the conda user guide to use python, create and manage environments: https://conda.io/docs/user-guide/overview.html. The following is a condensed summary for common workflows.
-
-### 4.1 Managing Your Environment
-Some commonly use packages are installed in the base (global) conda environment (e.g. tensorflow and jupyter). For some standard types of projects you should be able to use that base (global) environment without any changes. The environment should already be active in any bash shell with this standard setup, however if you need to activate it elsewhere just type ``conda activate``.
-
-However, there will some situations where there are packages that you may wish to install for a specific project, which are not available in the global environment (and you don't want to install them in the global environment either, perhaps due to versioning issues).
-
-For such projects with custom package requirements, it is recommended that you create a new conda environment. This is a good practice in general when starting new projects since you never know when a custom package will be required.
-
-```bash
-conda create --name project-name --clone base
-conda activate project-name
-```
-
-Whenever you update your environment, you should save its definition in case somebody else wants to replicate your environment and build your project. Do this by typing:
-
-```bash
-conda activate project-name
-conda env export > environment.yml
-```
-
-Others can then create an environment using your saved ``environment.yml`` file by typing:
-
-```bash
-conda env create -f environment.yml
-conda activate project-name
-```
-
-If you clone a repo that contains an ``environment.yml`` file, you should run the same commadn above to create the environment for that repo locally.
-
-### 4.3. Running
+### 4.3. Running Projects
 To run a script, first ensure that the appropriate conda environment is active. If you see ``(base) `` as a prefix to your bash shell then you are in the base (global) environment, which should be true for all bash shells. If you want to use another environment, for example to use some custom packages that are not installed in the base environment, make sure you run ``conda activate project-name``.
 
 Next, type ``python filename.py`` and the correct version of python plus all the dependencies you installed into the environment should resolve.
