@@ -76,8 +76,8 @@ conda env export > environment.yml
 Others can then create an environment using your saved ``environment.yml`` file by typing:
 
 ```bash
-conda env create -f environment.yml
 conda activate project-name
+conda env create -f environment.yml
 ```
 
 If you clone a repo that contains an ``environment.yml`` file, you should run the same commadn above to create the environment for that repo locally.
