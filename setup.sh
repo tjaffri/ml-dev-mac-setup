@@ -20,6 +20,9 @@ conda install jupyter -y
 # Install keras
 pip install --upgrade keras # not available on conda at the time of writing
 
+# Install matplotlib
+conda install matplotlib -y
+
 # Validate Tensorflow installation per https://www.tensorflow.org/install/install_mac#ValidateYourInstallation
 # We need to run a bit of python, using the trick here (with thanks): https://gist.github.com/welbornprod/ccbf43393ecd610032f4
 # Retrieve output from Python and put it into a BASH variable.
