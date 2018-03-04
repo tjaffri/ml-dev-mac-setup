@@ -14,6 +14,7 @@ See comments in ``setup.sh`` for more information. This is an automated script t
 
 1. [Homebrew](https://brew.sh/)
 2. [Git](https://git-scm.com/)
+3. [Node](https://nodejs.org/)
 3. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
 4. [Tensorflow](https://www.tensorflow.org/) (also performs a quick setup validation)
 5. [keras](https://keras.io/#installation)
