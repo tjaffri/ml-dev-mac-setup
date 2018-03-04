@@ -1,8 +1,11 @@
 # Install Homebrew (snippet from https://brew.sh)
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install git (snippet from https://git-scm.com/book/en/v1/Getting-Started-Installing-Git)
+# Install git
 brew install git
+
+# Install node and npm
+brew install node
 
 # Install miniconda3
 brew cask install miniconda
