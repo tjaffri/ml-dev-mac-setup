@@ -53,6 +53,7 @@ val_from_python
 brew cask install visual-studio-code
 code --install-extension ms-python.python
 code --install-extension dbaeumer.vscode-eslint
+code --install-extension EditorConfig.editorconfig
 conda install pylint -y
 pip install --upgrade autopep8 # not available on conda at the time of writing
 
