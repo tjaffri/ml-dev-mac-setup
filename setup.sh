@@ -4,6 +4,10 @@
 # Install git
 brew install git
 
+# Install and configure git lfs
+brew install git-lfs
+git lfs install --skip-smudge
+
 # Install node and npm
 brew install node
 
