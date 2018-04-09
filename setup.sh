@@ -18,6 +18,7 @@ brew install docker
 brew cask install miniconda
 echo ". /usr/local/miniconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
 echo "conda activate" >> ~/.bash_profile
+echo "alias pyclean='find . -name \"*.py[c|o]\" -o -name __pycache__ -exec rm -rf {} +'" >> ~/.bash_profile
 source ~/.bash_profile # add conda bins to path for this session 
 conda update conda -y # update conda
 
