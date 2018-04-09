@@ -52,6 +52,19 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
   "python.formatting.autopep8Args": [
     "--max-line-length=125"
   ],
+  // Configure glob patterns for excluding files and folders. For example, the files explorer decides which files and folders to show or hide based on this setting.
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.pyc": {
+      "when": "$(basename).py"
+    },
+    "**/__pycache__": true,
+    "**/.pytest_cache": true
+  }
 }
 ```
 
