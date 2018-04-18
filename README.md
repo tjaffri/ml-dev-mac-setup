@@ -16,12 +16,14 @@ See comments in ``setup.sh`` for more information. This is an automated script t
 1. [Homebrew](https://brew.sh/)
 2. [Git](https://git-scm.com/)
 3. [Node](https://nodejs.org/)
-3. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
-4. [Tensorflow](https://www.tensorflow.org/) (also performs a quick setup validation)
-5. [keras](https://keras.io/#installation)
-6. [Jupyter](https://jupyter.org)
-7. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
-8. [Google Chrome](https://www.google.com/chrome/)
+4. [Docker](https://www.docker.com/)
+5. [Wget](https://www.gnu.org/software/wget/)
+6. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
+7. [Tensorflow](https://www.tensorflow.org/) (also performs a quick setup validation)
+8. [keras](https://keras.io/#installation)
+9. [Jupyter](https://jupyter.org)
+10. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
+11. [Google Chrome](https://www.google.com/chrome/)
 
 To begin setup, launch Terminal and paste in the following. Set up is not completely unattended and will break occasionally to ask for credentials etc.
 
