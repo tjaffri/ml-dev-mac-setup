@@ -14,6 +14,9 @@ brew install node
 # Install docker
 brew install docker
 
+# Install wget
+brew install wget
+
 # Install miniconda3
 brew cask install miniconda
 echo ". /usr/local/miniconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
