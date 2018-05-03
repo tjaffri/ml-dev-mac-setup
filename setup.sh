@@ -67,6 +67,8 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension EditorConfig.editorconfig
 conda install pylint -y
 pip install --upgrade autopep8 # not available on conda at the time of writing
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension GrapeCity.gc-excelviewer
 
 # Launch vscode (makes it easier to pin it to the dock, and you see some docs as well)
 code
