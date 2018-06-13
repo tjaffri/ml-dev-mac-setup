@@ -9,6 +9,7 @@ Quick way to consistently set up a new mac with my personal dev preferences for 
 3. Download and install Microsoft Office (or other productivity suite), instructions will vary. Sign in. 
 4. Download Teams (or other chat service e.g. Slack), instructions will vary. Sign in.
 5. Clean up dock. Remove extraneous items and pin Terminal, Outlook, etc.
+6. Set up office printer
 
 # 2. Set up Dev Tools
 See comments in ``setup.sh`` for more information. This is an automated script that installs:
