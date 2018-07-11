@@ -69,6 +69,7 @@ conda install pylint -y
 pip install --upgrade autopep8 # not available on conda at the time of writing
 code --install-extension PeterJausovec.vscode-docker
 code --install-extension GrapeCity.gc-excelviewer
+code --install-extension dotjoshjohnson.xml
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
 
