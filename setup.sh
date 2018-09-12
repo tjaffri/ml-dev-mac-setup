@@ -24,6 +24,7 @@ echo "conda activate" >> ~/.bash_profile
 echo "alias pyclean='find . -name \"*.py[c|o]\" -o -name __pycache__ -exec rm -rf {} +'" >> ~/.bash_profile
 source ~/.bash_profile # add conda bins to path for this session 
 conda update conda -y # update conda
+python -m pip install --upgrade pip # update pip
 
 # Install tensorflow
 conda install tensorflow -y
