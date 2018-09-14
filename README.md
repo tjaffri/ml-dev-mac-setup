@@ -39,7 +39,7 @@ After setup is complete, Chrome and Visual Studio Code will launch automatically
 
 To use python in Visual Studio Code, read the docs here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.sh``.
 
-Here are some recommended user (global) settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Command-,`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
+Here are some recommended user (global) settings for vscode. You can go to ``Code > Preferences > Settings`` or just do ``Command-,`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
 
 ```
 {
@@ -82,11 +82,11 @@ If you will be using the integrated terminal a lot (why not?) you may also want 
         "command": "workbench.action.terminal.kill"
     },
     {
-        "key": "ctrl+shift+j",
+        "key": "ctrl+shift+k",
         "command": "workbench.action.terminal.focusNext"
     },
     {
-        "key": "ctrl+shift+k",
+        "key": "ctrl+shift+j",
         "command": "workbench.action.terminal.focusPrevious"
     },
     {
