@@ -73,6 +73,7 @@ code --install-extension GrapeCity.gc-excelviewer
 code --install-extension dotjoshjohnson.xml
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
+code --install-extension bradgashler.htmltagwrap
 
 # Launch vscode (makes it easier to pin it to the dock, and you see some docs as well)
 code
