@@ -17,6 +17,10 @@ brew install docker
 # Install wget
 brew install wget
 
+# Install sshfs
+brew cask install osxfuse
+brew install sshfs
+
 # Install miniconda3
 brew cask install miniconda
 echo ". /usr/local/miniconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
