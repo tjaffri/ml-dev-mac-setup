@@ -12,7 +12,7 @@ git lfs install --skip-smudge
 brew install node
 
 # Install docker
-brew install docker
+brew cask install docker
 
 # Install wget
 brew install wget
