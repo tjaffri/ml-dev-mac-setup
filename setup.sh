@@ -14,6 +14,9 @@ brew install node
 # Install docker
 brew cask install docker
 
+# Install ngrok
+brew cask install ngrok
+
 # Install wget
 brew install wget
 
