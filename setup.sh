@@ -26,7 +26,7 @@ brew install sshfs
 
 # Install miniconda3
 brew install miniconda --cask
-echo ". /usr/local/miniconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
+echo ". /usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" >> ~/.bash_profile
 echo "conda activate" >> ~/.bash_profile
 echo "alias pyclean='find . -name \"*.py[c|o]\" -o -name __pycache__ -exec rm -rf {} +'" >> ~/.bash_profile
 source ~/.bash_profile # add conda bins to path for this session 
@@ -34,13 +34,13 @@ conda update conda -y # update conda
 python -m pip install --upgrade pip # update pip
 
 # Install tensorflow
-conda install tensorflow -y
+conda install -c conda-forge tensorflow -y
 
 # Install jupyter
 conda install jupyter -y
 
 # Install keras
-pip install --upgrade keras # not available on conda at the time of writing
+conda install keras -y
 
 # Install matplotlib
 conda install matplotlib -y
@@ -53,8 +53,9 @@ function val_from_python {
     # Get a python value from BASH.
     pythonval="$(python3 - <<END
 import tensorflow as tf
+tf.compat.v1.disable_eager_execution()
 hello = tf.constant('Hello, TensorFlow!')
-sess = tf.Session()
+sess = tf.compat.v1.Session()
 print(sess.run(hello))
 END
 )"
