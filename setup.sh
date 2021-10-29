@@ -12,20 +12,20 @@ git lfs install --skip-smudge
 brew install node
 
 # Install docker
-brew cask install docker
+brew install docker --cask
 
 # Install ngrok
-brew cask install ngrok
+brew install ngrok --cask
 
 # Install wget
 brew install wget
 
 # Install sshfs
-brew cask install osxfuse
+brew install osxfuse --cask
 brew install sshfs
 
 # Install miniconda3
-brew cask install miniconda
+brew install miniconda --cask
 echo ". /usr/local/miniconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
 echo "conda activate" >> ~/.bash_profile
 echo "alias pyclean='find . -name \"*.py[c|o]\" -o -name __pycache__ -exec rm -rf {} +'" >> ~/.bash_profile
@@ -69,7 +69,7 @@ val_from_python
 
 # Install vscode (use this cask https://github.com/caskroom/homebrew-cask/blob/master/Casks/visual-studio-code.rb)
 # and related extensions/plugins
-brew cask install visual-studio-code
+brew install visual-studio-code --cask
 code --install-extension ms-python.python
 conda install pylint -y
 pip install --upgrade autopep8 # not available on conda at the time of writing
@@ -87,7 +87,7 @@ code --install-extension ms-vscode.csharp
 code
 
 # Install chrome
-brew cask install google-chrome
+brew install google-chrome --cask
 
 # Launch Chrome (makes it easier to pin it to the dock and set it as the default browser etc.)
 open -a "Google Chrome"
