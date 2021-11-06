@@ -12,21 +12,21 @@ git lfs install --skip-smudge
 brew install node
 
 # Install docker
-brew cask install docker
+brew install docker --cask
 
 # Install ngrok
-brew cask install ngrok
+brew install ngrok --cask
 
 # Install wget
 brew install wget
 
 # Install sshfs
-brew cask install osxfuse
+brew install osxfuse --cask
 brew install sshfs
 
 # Install miniconda3
-brew cask install miniconda
-echo ". /usr/local/miniconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
+brew install miniconda --cask
+echo ". /usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" >> ~/.bash_profile
 echo "conda activate" >> ~/.bash_profile
 echo "alias pyclean='find . -name \"*.py[c|o]\" -o -name __pycache__ -exec rm -rf {} +'" >> ~/.bash_profile
 source ~/.bash_profile # add conda bins to path for this session 
@@ -34,13 +34,13 @@ conda update conda -y # update conda
 python -m pip install --upgrade pip # update pip
 
 # Install tensorflow
-conda install tensorflow -y
+conda install -c conda-forge tensorflow -y
 
 # Install jupyter
 conda install jupyter -y
 
 # Install keras
-pip install --upgrade keras # not available on conda at the time of writing
+conda install keras -y
 
 # Install matplotlib
 conda install matplotlib -y
@@ -53,8 +53,9 @@ function val_from_python {
     # Get a python value from BASH.
     pythonval="$(python3 - <<END
 import tensorflow as tf
+tf.compat.v1.disable_eager_execution()
 hello = tf.constant('Hello, TensorFlow!')
-sess = tf.Session()
+sess = tf.compat.v1.Session()
 print(sess.run(hello))
 END
 )"
@@ -69,7 +70,7 @@ val_from_python
 
 # Install vscode (use this cask https://github.com/caskroom/homebrew-cask/blob/master/Casks/visual-studio-code.rb)
 # and related extensions/plugins
-brew cask install visual-studio-code
+brew install visual-studio-code --cask
 code --install-extension ms-python.python
 conda install pylint -y
 pip install --upgrade autopep8 # not available on conda at the time of writing
@@ -87,7 +88,7 @@ code --install-extension ms-vscode.csharp
 code
 
 # Install chrome
-brew cask install google-chrome
+brew install google-chrome --cask
 
 # Launch Chrome (makes it easier to pin it to the dock and set it as the default browser etc.)
 open -a "Google Chrome"
